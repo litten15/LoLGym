@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Archie Riley</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body >
+    
+LoLGym <br><br>
+Summoner Name <br>
+    
+
+    <input id="userName" value="rentboyarabia"/>
+    <select id="local">
+                  <option value="ru">RU</option>
+                  <option value="lan">LAN</option>
+                  <option value="eune">EUNE</option>
+                  <option value="oce">OCE</option>
+                  <option value="tr">TR</option>
+                  <option value="jp">JP</option>
+                  <option value="kr">KR</option>
+                  <option value="br">BR</option>
+                  <option value="na">NA</option>
+                  <option value="euw" selected="true">EUW</option>
+                  <option value="las">LAS</option>
+            </select><br/>
+    
+<input type="submit" value="Search" onclick="submitInfo();clearerror();"/>
+    <span id="serverType"></span>
+    <span id="sumName"></span>
+    <span id="errors"></span>
+<br>
+<br>
+    <div class="wrapper">
+<span id="username"></span><p id="intro" style="display:none;">'s stats<br><br></p>
+
+    <div class="summonerinfo">
+    Summoner Level: <span id="sLevel"></span><br>
+    Solo Rank: <span id="soloTier"></span><span id="soloDiv"></span><span id="soloLp"></span><br>
+    Flex Rank: <span id="flexTier"></span><span id="flexDiv"></span><span id="flexLp"></span>
+    </div>
+<!--
+<br>Output: <span id="output"></span>   
+<br>Output two: <span id="outputtwo"></span>
+-->
+    <div class="winrate">
+    Played: <span id="played"></span><br>
+    Wins: <span id ="wins"></span><br>
+    Losses: <span id="losses"></span><br>
+    Winrate: <span id="winrate"></span><br>
+    </div>
+    
+    <div class="kda">
+    Average KDA: <span id="kills"></span><span id="deaths"></span><span id="assists"></span><br>
+    Damage dealt/game: <span id="dmgD"></span><br>
+    Damage taken/game: <span id="dmgT"></span>
+    <br>
+    </div>
+    
+    <div class="gold">
+    CS/Game: <span id="cs"></span><br>
+    Gold/Game: <span id="aGold"></span><br>
+    Turrets/Game: <span id="turrets"></span>
+    <br>
+    </div>
+        </div>
+    
+    <div class="wrapper">
+<span id="playerTier"></span><p id="tierTitle" style="display:none;"> Average Stats<br><br></p>
+
+<!--
+    <div class="summonerinfo">
+    <br><br>
+    <br><br>
+    <br>
+    </div>
+-->
+<!--
+<br>Output: <span id="output"></span>   
+<br>Output two: <span id="outputtwo"></span>
+-->
+    <div class="winrate">
+    <br><br>
+    <br><br>
+    <br><br>
+    Winrate: <span id="winrate"></span><br>
+    </div>
+    
+    <div class="kda">
+    Average KDA: <span id="kills"></span><span id="deaths"></span><span id="assists"></span><br>
+    Damage dealt/game: <span id="dmgD"></span><br>
+    Damage taken/game: <span id="dmgT"></span>
+    <br>
+    </div>
+    
+    <div class="gold">
+    CS/Game: <span id="cs"></span><br>
+    Gold/Game: <span id="aGold"></span><br>
+    Turrets/Game: <span id="turrets"></span>
+    <br>
+    </div>
+        </div>
+    
+    
+    
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Archie Riley</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body >
+    
+LoLGym <br/>
+<br />Summoner Name
+
+<br />
+<input id="userName" />
+    <select id="local">
+                  <option value="ru">RU</option>
+                  <option value="lan">LAN</option>
+                  <option value="eune">EUNE</option>
+                  <option value="oce">OCE</option>
+                  <option value="tr">TR</option>
+                  <option value="jp">JP</option>
+                  <option value="kr">KR</option>
+                  <option value="br">BR</option>
+                  <option value="na">NA</option>
+                  <option value="euw" selected="true">EUW</option>
+                  <option value="las">LAS</option>
+            </select><br/>
+    
+<input type="submit" value="Search" onclick="window.location='stats.html';submitInfo();clearerror();"/>
+    <span id="serverType"></span>
+    <span id="sumName"></span>
+    <span id="errors"></span>
+<br />
+
+<br />Summoner Level: <span id="sLevel"></span>
+
+<br />Summoner ID: <span id="sID"></span>
+
+
+
+
+    
+    </body>
+</html>

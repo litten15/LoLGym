@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Archie Riley</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
+</head>
+<body>
+    
+LoLGym <br/>
+<br />Summoner Name
+
+<br />
+<input id="userName" />
+    <select id="local">
+                  <option value="ru">RU</option>
+                  <option value="lan">LAN</option>
+                  <option value="eune">EUNE</option>
+                  <option value="oce">OCE</option>
+                  <option value="tr">TR</option>
+                  <option value="jp">JP</option>
+                  <option value="kr">KR</option>
+                  <option value="br">BR</option>
+                  <option value="na">NA</option>
+                  <option value="euw" selected="true">EUW</option>
+                  <option value="las">LAS</option>
+            </select><br/>
+    
+<input type="submit" value="Search" onclick="summonerLookUp();clearerror();" />
+
+    <span id="errors"></span>
+<br />
+<br />Summoner Level: <span id="sLevel"></span>
+
+<br />Summoner ID: <span id="sID"></span>
+
+
+<script>
+
+  function summonerLookUp() {
+  var SUMMONER_NAME = "";
+  SUMMONER_NAME = $("#userName").val();
+        
+  var SERVER = "";
+  SERVER = $("#local").val();
+
+  
+
+  if (SUMMONER_NAME !== "") {
+
+    $.ajax({
+      url: 'https://' + SERVER + '.api.pvp.net/api/lol/' + SERVER + '/v1.4/summoner/by-name/' + SUMMONER_NAME + '?api_key=771f5509-7e01-4f41-9ec2-69e7b2158c66',
+      type: 'GET',
+      dataType: 'json',
+      data: {
+      },
+      success: function(json) {
+        var SUMMONER_NAME_NOSPACES = SUMMONER_NAME.replace(" ", "");
+
+        SUMMONER_NAME_NOSPACES = SUMMONER_NAME_NOSPACES.toLowerCase().trim();
+
+        summonerLevel = json[SUMMONER_NAME_NOSPACES].summonerLevel;
+        summonerID = json[SUMMONER_NAME_NOSPACES].id;
+
+        document.getElementById("sLevel").innerHTML = summonerLevel;
+        document.getElementById("sID").innerHTML = summonerID;
+
+      },
+      error: function(XMLHttpRequest, textStatus, errorThrown) {
+        document.getElementById('errors').innerHTML = "Error, could not find summoner";
+      }
+    });
+  } else {}
+}
+
+    function clearerror() {
+     document.getElementById('errors').innerHTML = "";
+    }
+
+
+</script>
