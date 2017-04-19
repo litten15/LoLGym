@@ -1,3 +1,7 @@
+function hide () {
+    document.getElementById('generateGamePlan').style.visibility = "hidden";
+}
+
 function submitInfo() {
     
     var SUMMONER_NAME_UI = "";
@@ -113,78 +117,6 @@ function summonerLookUp(SERVER, summonerID, SUMMONER_NAME_UI, played) {
                 }
             }
             
-            
-//            for(var i = 0; i < resp.champions.length; i += 1){
-//            var result = resp.champions[i].id;
-//            if(result.id === "0"){
-//                kills = resp.champions[i].stats.totalChampionKills;
-//            
-//            alert(kills);
-//            }
-//        }
-            
-//            document.getElementById('output').innerHTML = champs;
-            
-//            played = resp.champions[champs].stats.totalSessionsPlayed;
-//            document.getElementById('played').innerHTML = played;
-            
-//            wins = resp.champions[champs].stats.totalSessionsWon;
-//            document.getElementById('wins').innerHTML = wins;
-            
-//            losses = resp.champions[champs].stats.totalSessionsLost;
-//            document.getElementById('losses').innerHTML = losses;
-            
-//            winrate = wins / (wins + losses) * 100;
-//            winrate = Math.round(winrate * 10) / 10;
-//            document.getElementById('winrate').innerHTML = winrate + "%";
-            
-//            kills = resp.champions[champs].stats.totalChampionKills;
-//            averageKills = kills / played;
-//            averageKills = Math.round(averageKills * 10) / 10;
-//            document.getElementById('kills').innerHTML = averageKills + "/";
-            
-//            assists = resp.champions[champs].stats.totalAssists;
-//            averageAssists = assists / played;
-//            averageAssists = Math.round(averageAssists * 10) / 10;
-//            document.getElementById('assists').innerHTML = averageAssists;
-            
-//            deaths = resp.champions[champs].stats.totalDeathsPerSession;
-//            averageDeaths = deaths / played;
-//            averageDeaths = Math.round(averageDeaths * 10) / 10;
-//            document.getElementById('deaths').innerHTML = averageDeaths + "/";
-            
-//            dmgD = resp.champions[champs].stats.totalDamageDealt;
-//            averageDmgD = dmgD / played;
-//            averageDmgD = Math.round(averageDmgD);
-//            document.getElementById('dmgD').innerHTML = averageDmgD;
-            
-//            dmgT = resp.champions[champs].stats.totalDamageTaken;
-//            averageDmgT = dmgT / played;
-//            averageDmgT = Math.round(averageDmgT);
-//            document.getElementById('dmgT').innerHTML = averageDmgT;
-            
-//            cs = resp.champions[champs].stats.totalMinionKills;
-//            averageCS = cs / played;
-//            averageCS = Math.round(averageCS);
-//            document.getElementById('cs').innerHTML = averageCS;
-            
-//            gold = resp.champions[champs].stats.totalGoldEarned;
-//            averageGold = gold / played;
-//            averageGold = Math.round(averageGold);
-//            document.getElementById('aGold').innerHTML = averageGold;
-//            
-//            turrets = resp.champions[champs].stats.totalTurretsKilled;
-//            averageTurrets = turrets / played;
-//            averageTurrets = Math.round(averageTurrets * 10) / 10;
-//            document.getElementById('turrets').innerHTML = averageTurrets;
-            
-//            summonerID = json[SUMMONER_NAME].id;          
-//            document.getElementById("sLevel").innerHTML = summonerLevel;
-//            document.getElementById("sID").innerHTML = summonerID;
-//            document.getElementById("dTotalPhysicalDamageDealt").innerHTML = sTotalDmg;
-//            testing (SERVER);
-//            alert("it worked");
-//            document.getElementById('username').innerHTML = SUMMONER_NAME_UI;
             document.getElementById('intro').style.display = "inline";
             },
         
@@ -447,18 +379,6 @@ function decideRank (soloTier, flexTier) {
 //}
 //
 
-var bronzeCS        = 50;
-//var bronzeKills     =
-//var bronzeAssists   =
-//var bronzeDeaths    =
-//var bronzeDmgD      =
-//var bronzeDmgT      =
-//var bronzeGold      =
-//var bronzeTurrets   = 
-
-var silverCS = 100;
-
-
 function leagueAverage(){
 //    alert(highestTier);
     if (highestTier == 1) {
@@ -521,7 +441,7 @@ function bronze () {
         document.getElementById('kills').style.color = "red";
     }
     
-    if (averageDeaths > bronzeDeaths){
+    if (averageDeaths < bronzeDeaths){
         document.getElementById('deaths').style.color = "green";
     }
     else {
@@ -569,10 +489,10 @@ function bronze () {
     else {
         document.getElementById('winrate').style.color = "red";
     }
+    gameplan();
     
 }
 
-    
 function silver () {
     silverCS = 100;
     document.getElementById('leagueCs').innerHTML = silverCS;
@@ -616,7 +536,7 @@ function silver () {
         document.getElementById('kills').style.color = "red";
     }
     
-    if (averageDeaths > silverDeaths){
+    if (averageDeaths < silverDeaths){
         document.getElementById('deaths').style.color = "green";
     }
     else {
@@ -637,7 +557,7 @@ function silver () {
         document.getElementById('turrets').style.color = "red";
     }
     
-    if (averageGold > silverDmgD){
+    if (averageDmgD > silverDmgD){
         document.getElementById('dmgD').style.color = "green";
     }
     else {
@@ -664,9 +584,8 @@ function silver () {
     else {
         document.getElementById('winrate').style.color = "red";
     }
-    
+    generateGamePlan();    
 }
-
 
 function gold () {
     goldCS = 100;
@@ -711,7 +630,7 @@ function gold () {
         document.getElementById('kills').style.color = "red";
     }
     
-    if (averageDeaths > goldDeaths){
+    if (averageDeaths < goldDeaths){
         document.getElementById('deaths').style.color = "green";
     }
     else {
@@ -805,7 +724,7 @@ function platinum () {
         document.getElementById('kills').style.color = "red";
     }
     
-    if (averageDeaths > platinumDeaths){
+    if (averageDeaths < platinumDeaths){
         document.getElementById('deaths').style.color = "green";
     }
     else {
@@ -899,7 +818,7 @@ function diamond () {
         document.getElementById('kills').style.color = "red";
     }
     
-    if (averageDeaths > diamondDeaths){
+    if (averageDeaths < diamondDeaths){
         document.getElementById('deaths').style.color = "green";
     }
     else {
@@ -993,7 +912,7 @@ function master () {
         document.getElementById('kills').style.color = "red";
     }
     
-    if (averageDeaths > masterDeaths){
+    if (averageDeaths < masterDeaths){
         document.getElementById('deaths').style.color = "green";
     }
     else {
@@ -1087,7 +1006,7 @@ function challenger () {
         document.getElementById('kills').style.color = "red";
     }
     
-    if (averageDeaths > challengerDeaths){
+    if (averageDeaths < challengerDeaths){
         document.getElementById('deaths').style.color = "green";
     }
     else {
@@ -1115,7 +1034,7 @@ function challenger () {
         document.getElementById('dmgD').style.color = "red";
     }
     
-    if (averageDmgT > challengerDmgT){
+    if (averageDmgT < challengerDmgT){
         document.getElementById('dmgT').style.color = "green";
     }
     else {
@@ -1136,6 +1055,21 @@ function challenger () {
         document.getElementById('winrate').style.color = "red";
     }
     
+}
+
+
+function generateGamePlan () {
+    document.getElementById('generateGamePlan').style.visibility = "visible";
+}
+
+function gamePlan () {
+//    var colour = document.getElementById('winrate').style.color;
+////    alert(colour);
+//    var value = document.getElementById('winrate').innerHTML;
+//    alert(value);
+    if (document.getElementById('winrate').style.color == "red") {
+        alert("red");
+    }
 }
 
 
