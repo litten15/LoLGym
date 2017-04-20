@@ -12,12 +12,17 @@
 </head>
 <body onload="hide();">
     
-LoLGym <br><br>
-Summoner Name <br>
-    
+<div class="logo">
+    <img src="images/lolGymLogo.png" class="logoImg">
+</div>
 
-    <input id="userName" value="rentboyarabia"/>
-    <select id="local">
+    
+    <div id="imgContainer">
+    <img src="images/banner2.png" class="bannerImg">
+        
+        <div id="inputContainer">
+            <input id="userName"  placeholder="SEARCH SUMMONER NAME..."/>
+                <select id="local">
                   <option value="ru">RU</option>
                   <option value="lan">LAN</option>
                   <option value="eune">EUNE</option>
@@ -29,14 +34,58 @@ Summoner Name <br>
                   <option value="na">NA</option>
                   <option value="euw" selected="true">EUW</option>
                   <option value="las">LAS</option>
-            </select><br/>
+                </select><br/>
     
 <input type="submit" value="Search" onclick="submitInfo();clearerror();"/>
     <span id="serverType"></span>
     <span id="sumName"></span>
     <span id="errors"></span>
+            
+        </div>
+<div id="headingOne">
+    <h1>THE EASIEST WAY TO TRAIN</h1>
+</div>
+    </div>
+<div class="information">
+<h2>HOW IT WORKS</h2>
+    <div class="divider">
+        content
+    </div>
+    
+    <div class="divider">
+        content
+    </div>
+    
+    <div class="divider">
+        content
+    </div>
+    
+    <div class="divider">
+        content
+    </div>
+    
+</div>
+   
+
+    
+<!--
+    
+    <div class="img-container">
+                      <img src="images/uxperiments.png" id="ux">
+                      <div class="uxbutton">
+                      <p>hello</p>        
+                      </div>
+                  </div>
+    
+-->
+<!--
+
+-->
+    
 <br>
 <br>
+    
+    <div id="stats">
     <div class="wrapper">
 <span id="username"></span><p id="intro" style="display:none;">'s stats<br><br></p>
 
@@ -45,6 +94,7 @@ Summoner Name <br>
     Solo Rank: <span id="soloTier"></span><span id="soloDiv"></span><span id="soloLp"></span><br>
     Flex Rank: <span id="flexTier"></span><span id="flexDiv"></span><span id="flexLp"></span>
     </div>
+
 <!--
 <br>Output: <span id="output"></span>   
 <br>Output two: <span id="outputtwo"></span>
@@ -74,17 +124,6 @@ Summoner Name <br>
     <div class="wrapper">
 <span id="playerTier"></span><p id="tierTitle" style="display:none;"> Average Stats<br><br></p>
 
-<!--
-    <div class="summonerinfo">
-    <br><br>
-    <br><br>
-    <br>
-    </div>
--->
-<!--
-<br>Output: <span id="output"></span>   
-<br>Output two: <span id="outputtwo"></span>
--->
     <div class="winrate">
     <br><br>
     <br><br>
@@ -106,6 +145,7 @@ Summoner Name <br>
     <br>
     </div>
         </div>
+    </div>
     <br>
     <input type="submit" value="Generate game plan" id="generateGamePlan" onClick="gamePlan();"/>
 
@@ -148,6 +188,9 @@ Summoner Name <br>
         </div>
         
     </div>
+    
+    
+   
     
     
     

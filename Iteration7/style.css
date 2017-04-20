@@ -1,0 +1,102 @@
+body {
+    margin: 0px;
+}
+
+div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.wrapper {
+    width:300px;
+    display: inline-block;
+}
+
+.logo {
+    width:100%;
+    height: auto;
+}
+
+.logoImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    width: auto;
+}
+
+.mainBanner {
+    width: 100%;
+    height: auto;
+    
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+   
+}
+
+
+#imgContainer {
+    position: relative;    
+}
+
+h1 {
+    color: white;
+    font-size: 26px;
+}
+
+h2 {
+    color: black;
+    font-size: 26px;
+    text-align: center;
+    margin: 0;
+}
+
+#inputContainer {
+   position: absolute;
+   top: 40%;
+   left: 38%;
+}
+
+#headingOne {
+   position: absolute;
+   top: 79%;
+   left: 36%;
+}
+
+.bannerImg {
+    width: 100%;
+    height: auto;
+}
+
+input {
+    width: 315px;
+    height: 40px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+select {
+    height: 40px;
+    border: none;
+    border-radius: 0px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size: 20px;
+
+}
+
+.information {
+    width: 100%;
+    height: auto;
+}
+
+.divider {
+    height: auto;
+    width: 24%;
+    display: inline-block;
+}
+

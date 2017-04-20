@@ -9,6 +9,8 @@ function hide () {
     document.getElementById('deathsContent').style.display = "none";
     document.getElementById('assistsContent').style.display = "none";
     document.getElementById('turretsContent').style.display = "none";
+    document.getElementById('stats').style.display = "none";
+    
 }
 
 function submitInfo() {
@@ -58,7 +60,7 @@ function submitInfo() {
 }    
 
 function summonerLookUp(SERVER, summonerID, SUMMONER_NAME_UI, played) {
-
+        document.getElementById('stats').style.display = "block";
 //    alert(SERVER);
 //    alert(SUMMONER_NAME);
 //    alert(summonerID);
