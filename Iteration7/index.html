@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
 </head>
 <body onload="hide();">
     
@@ -21,7 +23,7 @@
     <img src="images/banner2.png" class="bannerImg">
         
         <div id="inputContainer">
-            <input id="userName"  placeholder="SEARCH SUMMONER NAME..."/>
+            <input type="searchBar" id="userName"  placeholder=" SUMMONER NAME..."/>
                 <select id="local">
                   <option value="ru">RU</option>
                   <option value="lan">LAN</option>
@@ -36,7 +38,7 @@
                   <option value="las">LAS</option>
                 </select><br/>
     
-<input type="submit" value="Search" onclick="submitInfo();clearerror();"/>
+<input type="submit" value="SEARCH" onclick="submitInfo();clearerror();"/>
     <span id="serverType"></span>
     <span id="sumName"></span>
     <span id="errors"></span>
@@ -48,25 +50,34 @@
     </div>
 <div class="information">
 <h2>HOW IT WORKS</h2>
-    <div class="divider">
-        content
+    <div class="divider"> 
     </div>
     
     <div class="divider">
-        content
+        <img src="images/supportIcon.png" class="icon">
     </div>
     
     <div class="divider">
-        content
+        <img src="images/fighterIcon.png" class="icon">
     </div>
     
     <div class="divider">
-        content
     </div>
+    
+    <div class="divider">
+        <p class="infoText">LoLGym lets you search to learn about yours or a friends stats and see how they compare to your league average</p>
+    </div>
+    
+    <div class="divider">
+       <p class="infoText">Automatically generate a tailored game plan to help you improve your in-game performace and climb the ladder</p>
+    </div>
+    
+    
     
 </div>
-   
 
+
+<!--<div class="pageTwo" style="display: none;">-->
     
 <!--
     
@@ -77,7 +88,6 @@
                       </div>
                   </div>
     
--->
 <!--
 
 -->
@@ -189,10 +199,23 @@
         
     </div>
     
+    <div class="bar">
+    </div>
+    <div class="footer">
+        <p class="footerText">
+        <a class="footerText" href="https://litten15.github.io/port/">Archie Riley</a>
+        - 2017</p>
+    </div>
+        <p class="footerText">
+        LoL Gym isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.
+        </p>
+    
+    
+
     
    
     
     
-    
+
     </body>
 </html>

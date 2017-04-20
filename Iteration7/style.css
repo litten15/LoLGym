@@ -45,6 +45,9 @@ div {
 h1 {
     color: white;
     font-size: 26px;
+    font-family: 'Lato', sans-serif;
+     letter-spacing: 1px;
+
 }
 
 h2 {
@@ -52,18 +55,28 @@ h2 {
     font-size: 26px;
     text-align: center;
     margin: 0;
+    font-family: 'Lato', sans-serif;
+
 }
 
 #inputContainer {
    position: absolute;
-   top: 40%;
-   left: 38%;
+    top: 60%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 }
 
 #headingOne {
    position: absolute;
+/*
    top: 79%;
    left: 36%;
+*/
+    top: 90%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 }
 
 .bannerImg {
@@ -72,7 +85,7 @@ h2 {
 }
 
 input {
-    width: 315px;
+    
     height: 40px;
     border: none;
     margin-bottom: 10px;
@@ -82,10 +95,16 @@ select {
     height: 40px;
     border: none;
     border-radius: 0px;
+    font-size: 15px;
+    vertical-align: top;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    align-content: center;
+    letter-spacing: 1px;
+    color: black;
 
 }
 
@@ -96,7 +115,71 @@ select {
 
 .divider {
     height: auto;
-    width: 24%;
+    width: 25%;
     display: inline-block;
 }
 
+.infoText {
+    text-align: center;
+    margin-top: -10px;
+    font-family: 'Lato', sans-serif;
+    vertical-align: top;
+}
+
+.icon {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+input[type=searchBar] {
+    background-image: url('images/searchicon.png');
+    background-position: 325px 8px; 
+    background-repeat: no-repeat;
+    padding-right: 40px;
+    width: 315px;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+input[type=submit] {
+    position: relative;
+    top: 60%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -10%);
+    width: 135px;
+    background-color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.bar {
+    width: 100%;
+    height: 10px;
+    background-color: black;
+}
+
+.footer {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.plan {
+    margin-top:0px;
+    margin-bottom: 0px;
+}
+
+.footerText {
+    color: #777777;
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    text-align: center;
+    
+}

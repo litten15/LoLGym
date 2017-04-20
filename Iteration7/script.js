@@ -1,5 +1,5 @@
 function hide () {
-    document.getElementById('generateGamePlan').style.visibility = "hidden";
+    document.getElementById('generateGamePlan').style.display = "none";
     document.getElementById('winrateContent').style.display = "none";
     document.getElementById('csContent').style.display = "none";
     document.getElementById('dmgTContent').style.display = "none";
@@ -10,6 +10,7 @@ function hide () {
     document.getElementById('assistsContent').style.display = "none";
     document.getElementById('turretsContent').style.display = "none";
     document.getElementById('stats').style.display = "none";
+    
     
 }
 
@@ -60,6 +61,7 @@ function submitInfo() {
 }    
 
 function summonerLookUp(SERVER, summonerID, SUMMONER_NAME_UI, played) {
+    
         document.getElementById('stats').style.display = "block";
 //    alert(SERVER);
 //    alert(SUMMONER_NAME);
@@ -689,6 +691,7 @@ function gold () {
     else {
         document.getElementById('winrate').style.color = "red";
     }
+    generateGamePlan(); 
     
 }
 
@@ -783,6 +786,7 @@ function platinum () {
     else {
         document.getElementById('winrate').style.color = "red";
     }
+    generateGamePlan(); 
     
 }
 
@@ -877,7 +881,7 @@ function diamond () {
     else {
         document.getElementById('winrate').style.color = "red";
     }
-    
+    generateGamePlan(); 
 }
 
 function master () {
@@ -971,7 +975,7 @@ function master () {
     else {
         document.getElementById('winrate').style.color = "red";
     }
-    
+    generateGamePlan(); 
 }
 
 function challenger () {
@@ -1065,12 +1069,12 @@ function challenger () {
     else {
         document.getElementById('winrate').style.color = "red";
     }
-    
+    generateGamePlan(); 
 }
 
 
 function generateGamePlan () {
-    document.getElementById('generateGamePlan').style.visibility = "visible";
+    document.getElementById('generateGamePlan').style.display = "block";
 }
 
 function gamePlan () {
