@@ -11,6 +11,7 @@ function hide () {
     document.getElementById('turretsContent').style.display = "none";
     document.getElementById('stats').style.display = "none";
     document.getElementById('pageTwo').style.display = "none";
+    document.getElementById('staticPlan').style.display = "none";
 }
 
 function submitInfo() {
@@ -40,6 +41,7 @@ function submitInfo() {
             document.getElementById('sLevel').innerHTML = summonerLevel;
             fName = json[SUMMONER_NAME].name;
             document.getElementById('username').innerHTML = fName;
+            sumName = fName;
 //            testing (SERVER);
 //            alert("it worked");
             
@@ -337,6 +339,8 @@ function rankedLookup(summonerID, SERVER, SUMMONER_NAME_UI) {
 }
 
 function decideRank (soloTier, flexTier) {
+//    alert(soloTier);
+//    alert(flexTier);
     if (soloTier == "BRONZE") {
         sTier = 1;
     } else if (soloTier == "SILVER") {
@@ -359,19 +363,19 @@ function decideRank (soloTier, flexTier) {
     
     if (flexTier == "BRONZE") {
         fTier = 1;
-    } else if (soloTier == "SILVER") {
+    } else if (flexTier == "SILVER") {
         fTier = 2;
-    } else if (soloTier == "GOLD") {
+    } else if (flexTier == "GOLD") {
         fTier = 3;
-    } else if (soloTier == "PLATINUM") {
+    } else if (flexTier == "PLATINUM") {
         fTier = 4;
-    } else if (soloTier == "DIAMOND") {
+    } else if (flexTier == "DIAMOND") {
         fTier = 5;
-    } else if (soloTier == "MASTER") {
+    } else if (flexTier == "MASTER") {
         fTier = 6;
-    } else if (soloTier == "CHALLENGER") {
+    } else if (flexTier == "CHALLENGER") {
         fTier = 7;
-    } else if (fTier == "") {
+    } else if (flexTier == "") {
         fTier = 0;
     }
     else {
@@ -387,7 +391,8 @@ function decideRank (soloTier, flexTier) {
         document.getElementById('playerTier').innerHTML = flexTier;
         document.getElementById('tierTitle').style.display = "inline";
     }
-    
+//    alert(sTier);
+//    alert(fTier);
     document.getElementById('soloRankIcon').src = 'images/rankIcons/' + sTier + '.png';
     document.getElementById('flexRankIcon').src = 'images/rankIcons/' + fTier + '.png';
 //    alert(fTier);
@@ -407,7 +412,7 @@ function leagueAverage(){
     } else if (highestTier == 2){
         silver();
     } else if (highestTier == 3){
-        gold();
+        goldeen();
     } else if (highestTier == 4){
         platinum();
     } else if (highestTier == 5){
@@ -608,7 +613,9 @@ function silver () {
     generateGamePlan();    
 }
 
-function gold () {
+
+function goldeen() {
+    
     goldCS = 100;
     document.getElementById('leagueCs').innerHTML = goldCS;
     
@@ -1091,38 +1098,41 @@ function gamePlan () {
 //    var value = document.getElementById('winrate').innerHTML;
 //    alert(value);
     hintCount = 0;
+    document.getElementById('staticPlan').style.display = "block";
+    document.getElementById('planPage').style.display = "block";
+    document.getElementById('usernamePlan').innerHTML = sumName;
+    
     
     if (document.getElementById('kills').style.color == "red" && hintCount < 4) {
-        document.getElementById('killsContent').style.display = "block";
+        document.getElementById('killsContent').style.display = "inline-block";
         hintCount = hintCount + 1;
     }
     
     if (document.getElementById('cs').style.color == "red" && hintCount < 4) {
-        document.getElementById('csContent').style.display = "block";
+        document.getElementById('csContent').style.display = "inline-block";
         hintCount = hintCount + 1;
     }
     
     if (document.getElementById('aGold').style.color == "red" && hintCount < 4) {
-        document.getElementById('goldContent').style.display = "block";
+        document.getElementById('goldContent').style.display = "inline-block";
         hintCount = hintCount + 1;
     }
     
     
-    
     if (document.getElementById('dmgD').style.color == "red" && hintCount < 4) {
-        document.getElementById('dmgDContent').style.display = "block";
+        document.getElementById('dmgDContent').style.display = "inline-block";
         hintCount = hintCount + 1;
     }
     
     if (document.getElementById('dmgT').style.color == "red" && hintCount < 4) {
-        document.getElementById('dmgTContent').style.display = "block";
+        document.getElementById('dmgTContent').style.display = "inline-block";
         hintCount = hintCount + 1;
     }
     
     
     if (document.getElementById('winrate').style.color == "red" && hintCount < 4) {
 //        alert("red");
-        document.getElementById('winrateContent').style.display = "block";
+        document.getElementById('winrateContent').style.display = "inline-block";
         hintCount = hintCount + 1;
 //        return(hintCount);
 //        alert(hintCount);
@@ -1130,17 +1140,17 @@ function gamePlan () {
     
     
     if (document.getElementById('deaths').style.color == "red" && hintCount < 4) {
-        document.getElementById('deathsContent').style.display = "block";
+        document.getElementById('deathsContent').style.display = "inline-block";
         hintCount = hintCount + 1;
     }
     
     if (document.getElementById('assists').style.color == "red" && hintCount < 4) {
-        document.getElementById('assistsContent').style.display = "block";
+        document.getElementById('assistsContent').style.display = "inline-block";
         hintCount = hintCount + 1;
     }
     
     if (document.getElementById('turrets').style.color == "red" && hintCount < 4) {
-        document.getElementById('turretsContent').style.display = "block";
+        document.getElementById('turretsContent').style.display = "inline-block";
         hintCount = hintCount + 1;
     }
     
@@ -1164,7 +1174,10 @@ function gamePlan () {
     
 //    alert(leagueAverageCS);
     
+function closePlan(){
 
+    document.getElementById('planPage').style.display = "none";
+}
 
 
 function clearerror() {

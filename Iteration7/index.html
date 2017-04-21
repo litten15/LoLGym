@@ -13,16 +13,18 @@
 
 </head>
 <body onload="hide();">
+    <div class="planWrapper">
     
 <div class="logo">
-    <img src="images/lolGymLogo.png" class="logoImg">
+    <img src="images/lolGymLogo.png" class="logoImg" id="logoImg">
 </div>
 
-    
+    <div id="pageOne">
     <div id="imgContainer">
     <img src="images/banner2.png" class="bannerImg">
         
         <div id="inputContainer">
+            <p id="errors" class="errors"></p>
             <input type="searchBar" id="userName"  placeholder=" SUMMONER NAME..."/>
                 <select id="local">
                   <option value="ru">RU</option>
@@ -41,7 +43,7 @@
 <input type="submit" value="SEARCH" onclick="submitInfo();clearerror();"/>
     <span id="serverType"></span>
     <span id="sumName"></span>
-    <span id="errors"></span>
+    
             
         </div>
 <div id="headingOne">
@@ -76,28 +78,39 @@
     
 </div>
 
+    </div>
 
-<!--<div class="pageTwo" style="display: none;">-->
+    <br>
     
-<!--
+    <div id="pageTwo">
+        <div class="topBar">
+            <div class="topBarContainer">
+        <div class="fiths">
+            
+        </div>
+            
+        <div class="fiths">
+            <span id="username" class="title"></span>
+            <p class="subTitle">(Level <span id="sLevel"></span>)</p>
+            <img id="soloRankIcon" src="" class="rankIcons">
+            <p class="rankText">SOLO <span id="soloTier"></span><span id="soloDiv"></span>(<span id="soloLp"></span>)</p>
+            
+        </div>
+                       
+        <div class="fiths">
+            <img id="flexRankIcon" src="" class="rankIcons">
+            <p class="rankText">FLEX <span id="flexTier"></span><span id="flexDiv"></span>(<span id="flexLp"></span>)</p>
+        </div>
+            
     
-    <div class="img-container">
-                      <img src="images/uxperiments.png" id="ux">
-                      <div class="uxbutton">
-                      <p>hello</p>        
-                      </div>
-                  </div>
-    
-<!--
-
--->
-    
-<br>
-<br>
-    
+       <img src="images/blitzBanner.png" class="blitzBanner">
+       
+            
+        </div>
+            </div>
     <div id="stats">
     <div class="wrapper">
-<span id="username"></span><p id="intro" style="display:none;">'s stats<br><br></p>
+<span id="username"></span><p id="intro" style="display:none;"></p>
 
     <div class="summonerinfo">
     Summoner Level: <span id="sLevel"></span><br>
@@ -157,8 +170,11 @@
         </div>
     </div>
     <br>
-    <input type="submit" value="Generate game plan" id="generateGamePlan" onClick="gamePlan();"/>
-
+    <input type="button" value="CREATE TRAINING PLAN" id="generateGamePlan" onClick="gamePlan();"/>
+    </div>
+        <div class="planPage">
+        
+  
     <div class="plan">
         
         <div id = "winrateContent">
@@ -215,7 +231,7 @@
     
    
     
-    
-
+      
+        </div></div>
     </body>
 </html>

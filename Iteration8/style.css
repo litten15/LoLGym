@@ -270,9 +270,109 @@ input[type=button] {
     top: 50%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -90%);
+    transform: translate(-50%, -50%);
     width: 60%;
     background-color: #222222;
     display: block;
     height: auto;
 }
+
+.planH1 {
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    color: white;
+    letter-spacing: 1px;
+    margin-left: 18px;
+    display: inline-block;
+}
+
+.helpContent {
+    width: 49%;
+   padding-left: 3px;
+    margin: 0;
+}
+
+.closeButton {
+    float:right;
+    height: auto;
+    width: 40px;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+
+.moduleH1 {
+    background-color: #ffffff;
+    height: auto;
+    margin-bottom: 0px;
+    margin-top: -5px;
+}
+
+.moduleBody {
+    background-color: #E1DDDD;
+    height: 20px;
+    margin-top: 4px;
+    height: auto;
+}
+
+.moduleTextHead {
+    font-size: 15px;
+    font-family: "Lato", sans-serif;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    padding-left: 7px;
+    display: inline-block;
+    margin: 0;
+}
+
+.informationButton {
+    display: inline-block;
+    height: auto;
+    width: 24px;
+    float: right;
+    padding-right: 10px;
+    padding-top: 4px;
+}
+
+
+.tips {
+    width: 100%;
+    height: 30%;
+    display: inline-block;
+}
+
+.videos {
+    width: 100%;
+    height: 70%;
+    display: inline-block;
+    margin-left: 8%;
+}
+
+.h3 {
+    margin: 0;
+    padding: 0;
+    font-family: "lato", sans-serif;
+    font-size: 15px;
+    color: #222222;
+    font-weight: bold;
+    padding-left: 7px;
+    
+}
+
+ul {
+    margin-bottom: 0;
+    font-family: "lato", sans-serif;
+    font-size: 12px;
+}
+
+.videoLink {
+    height: 60px;
+    width: 100px;
+    display: inline-block;
+    margin: 0;
+    
+}
+
+.thumbnail {
+    width: 100%;
+}
+
